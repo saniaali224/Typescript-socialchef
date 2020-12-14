@@ -1,0 +1,86 @@
+{
+  "name": "boilerplate-typescript-express",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "author": "Sania Khan",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "babel ./src/server.ts -d dist",
+    "build-ts": "tsc",
+    "clean": "rm -rf ./dist",
+    "serve": "npm run build-ts && npm run build && node dist/server.js",
+    "start": "npm run serve",
+    "test": "jest",
+    "watch-ts": "tsc --watch",
+		"dev": "nodemon server.ts"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.1.0",
+    "@types/bluebird": "^3.5.29",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^12.12.7",
+    "@types/sequelize": "^4.28.6",
+    "@types/validator": "^10.11.3",
+    "aws-sdk": "^2.619.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "helmet": "^3.21.2",
+    "jest": "^24.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.12",
+    "mongoose-auto-increment": "^5.0.1",
+    "morgan": "^1.9.1",
+    "mysql2": "^2.0.0",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.3.0",
+    "ts-mongoose": "^0.0.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "^0.0.36",
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.16.0",
+    "@types/hapi__joi": "^15.0.2",
+    "@types/helmet": "^0.0.38",
+    "@types/jest": "^24.0.15",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/mongoose-auto-increment": "^5.0.32",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^12.12.7",
+    "@types/supertest": "^2.0.8",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.10.0",
+    "typescript": "^3.7.2",
+    "typings": "^2.1.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/test/*.test.+(ts|tsx|js)"
+    ]
+  }
+}
